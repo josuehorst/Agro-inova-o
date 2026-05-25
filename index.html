@@ -1,15 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página do Agrinho</title>
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<div class="container"></div><img src="img/triste-cachorro.jpg" width="30%" height="30%" alt="foca nos estudos" >
- <h1>Só falta um trimestre </h1>
- <h2>E a gente está como?</h2>
- <h1>Sedentos pelo saber  </h1>
- <div class="container"></div><img src="img/cachorro triste 2.jpg" width="30%" height="30%" alt="foca nos estudos" >
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <h1>Agro<span>Forte</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="interface">
+            <div class="texto-banner">
+                <h2>O CAMPO PRODUZ, A NATUREZA AGRADECE.</h2>
+                <p>Unindo a força da produção agrícola às práticas mais modernas de sustentabilidade para alimentar o mundo e preservar o amanhã.</p>
+                <a href="#sobre" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="interface">
+            <h2>Sobre o Projeto</h2>
+            <p>O <strong>Agro Forte, Futuro Sustentável</strong> nasceu com a missão de mostrar que a produtividade no campo e a preservação ambiental caminham juntas. Acreditamos na tecnologia, no manejo responsável do solo e no respeito aos recursos hídricos como pilares para o sucesso do agronegócio moderno.</p>
+        </div>
+    </section>
+
+    <section id="pilares" class="pilares">
+        <div class="interface">
+            <h2>Nossos Pilares</h2>
+            <div class="cards-container">
+                
+                <div class="card">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Manejo Consciente</h3>
+                    <p>Uso de técnicas que preservam os nutrientes do solo, evitando a erosão e garantindo colheitas saudáveis a longo prazo.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h3>Gestão de Água</h3>
+                    <p>Sistemas de irrigação inteligente e captação de água da chuva para reduzir o desperdício desse recurso vital.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-solar-panel"></i>
+                    <h3>Energia Limpa</h3>
+                    <p>Incentivo ao uso de fontes renováveis, como a energia solar e biomassa, nas propriedades rurais.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="interface">
+            <h2>Fale Conosco</h2>
+            <p>Quer saber mais ou fazer parceria? Envie uma mensagem!</p>
+            <form action="#">
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="interface">
+            <p>&copy; 2026 Agro Forte, Futuro Sustentável. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
