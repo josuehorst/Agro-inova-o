@@ -1,4 +1,4 @@
-/* Configurações Gerais de Reset */
+/* Configurações Gerais e Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,44 +8,47 @@
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #fcfdfc;
+    color: #2c3e50;
 }
 
-/* Limitação de largura do conteúdo */
 .interface {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 4%;
 }
 
-/* Botão Padrão */
+/* Botões */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
-    background-color: #2e7d32; /* Verde Agro */
+    padding: 14px 35px;
+    background-color: #2e7d32; /* Verde Agro principal */
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-weight: 600;
-    transition: 0.3s;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
     border: none;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
 }
 
 .btn:hover {
     background-color: #1b5e20;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
 }
 
 /* Cabeçalho / Menu */
 header {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
 }
 
 header .interface {
@@ -56,7 +59,8 @@ header .interface {
 
 .logo h1 {
     color: #333;
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 .logo h1 span {
@@ -69,13 +73,13 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #555;
-    font-weight: 500;
+    font-weight: 600;
     transition: 0.3s;
 }
 
@@ -83,10 +87,11 @@ nav ul li a:hover {
     color: #2e7d32;
 }
 
-/* Banner Principal */
+/* Banner Principal com a Imagem do Projeto */
 .banner {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), 
+                url('https://images.googleusercontent.com/image_generation_content/0') no-repeat center center/cover;
+    height: 85vh;
     display: flex;
     align-items: center;
     color: #fff;
@@ -94,148 +99,218 @@ nav ul li a:hover {
 }
 
 .texto-banner h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 15px;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
-.texto-banner p {
+.texto-banner .subtitulo {
+    font-size: 22px;
+    color: #a5d6a7; /* Verde claro em destaque */
+    font-weight: 500;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.texto-banner p:not(.subtitulo) {
     font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 800px;
+    margin-bottom: 35px;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.95;
+}
+
+/* Faixa de Destaque (Frase Forte) */
+.frase-destaque {
+    background-color: #2e7d32;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.frase-destaque blockquote {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 /* Seções Gerais */
 section {
-    padding: 80px 0;
+    padding: 90px 0;
 }
 
 section h2 {
-    font-size: 32px;
+    font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
-    position: relative;
-    color: #2c3e50;
+    color: #1b5e20;
+    font-weight: 700;
 }
 
 section h2::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 3px;
+    width: 70px;
+    height: 4px;
     background-color: #81c784;
-    margin: 10px auto 0 auto;
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
 }
 
-/* Sobre */
+/* Seção Sobre */
 .sobre p {
     font-size: 18px;
     line-height: 1.8;
     text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    color: #555;
+    max-width: 850px;
+    margin: 0 auto 20px auto;
+    color: #455a64;
 }
 
-/* Pilares (Cards) */
+.sobre .enfase-sobre {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-top: 30px;
+}
+
+/* Seção Pilares */
 .pilares {
-    background-color: #f1f8e9;
+    background-color: #f4f9f4;
+}
+
+.slogan-secao {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: -20px;
+    margin-bottom: 50px;
 }
 
 .cards-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .card {
     background-color: #fff;
-    padding: 30px;
+    padding: 40px 30px;
     flex: 1;
     min-width: 280px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: 0.4s ease;
+    border-bottom: 4px solid transparent;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.1);
+    border-color: #2e7d32;
 }
 
 .card i {
-    font-size: 40px;
+    font-size: 45px;
     color: #2e7d32;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .card h3 {
+    font-size: 22px;
     margin-bottom: 15px;
     color: #333;
 }
 
 .card p {
-    color: #666;
+    color: #555;
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Contato */
 .contato p {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #555;
 }
 
 .contato form {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .contato input, .contato textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
     font-size: 16px;
+    background-color: #fff;
+    transition: 0.3s;
 }
 
 .contato input:focus, .contato textarea:focus {
     outline: none;
     border-color: #2e7d32;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.2);
 }
 
 /* Rodapé */
 footer {
-    background-color: #1b5e20;
+    background-color: #113313;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
+    padding: 40px 0;
 }
 
-/* Responsividade para Celulares */
+.rodape-slogan {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #a5d6a7;
+    margin-bottom: 15px;
+}
+
+.direitos {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Responsividade (Telas menores e Celulares) */
 @media (max-width: 768px) {
     header .interface {
         flex-direction: column;
         gap: 15px;
     }
     
-    .texto-banner h2 {
-        font-size: 28px;
+    nav ul li {
+        margin: 0 10px;
     }
 
-    .texto-banner p {
-        font-size: 16px;
+    .texto-banner h2 {
+        font-size: 32px;
+    }
+
+    .texto-banner .subtitulo {
+        font-size: 18px;
+    }
+
+    .frase-destaque blockquote {
+        font-size: 20px;
     }
 
     section {
-        padding: 50px 0;
+        padding: 60px 0;
     }
 }
